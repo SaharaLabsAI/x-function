@@ -1,4 +1,4 @@
-# Programmable Governance for Compliant Agent Workflows
+# Programmable Governance for Programmable Agent Workflows
 
 The x/function/customized-policy adds a programmable rules layer that lets providers define and enforce “terms of use” for their data, models, and tools.
 
