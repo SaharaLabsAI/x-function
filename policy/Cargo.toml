@@ -1,0 +1,49 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+resolver = "2"
+members = [
+  "./binaries/hypervisor"
+, "./crates/attest"
+]
+exclude = [
+# app needs different target, please cd into it then cargo build
+  "binaries/apps/examples/hello"
+]
+
+[workspace.dependencies]
+aes-gcm-siv = "0.11"
+alloy = "1.0"
+anyhow = "1.0"
+axum = { version = "0.8", features = ["macros", "json"] }
+blake3 = "1.8"
+chrono = { version = "0.4", features = ["serde"] }
+clap = "4.5"
+const-hex = "1.17"
+dashmap = "6"
+dcap-rs = { git = "https://github.com/SeaSailors/dcap-rs", branch = "feat-quote-v5" }
+http-body-util = "0.1"
+hyper = { version = "1.0", features = ["full"] }
+hyper-util = { version = "0.1", features = ["full"] }
+k256 = { version = "0.13", features = ["ecdh", "schnorr", "ecdsa-core", "sha256"] }
+hkdf = "0.12"
+rand = { version = "0.8", features = ["getrandom"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "http2", "system-proxy", "charset", "json"] }
+secrecy = { version = "0.10", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha3 = "0.10"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+toml = "0.9"
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["fs", "trace", "cors"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.0", features = ["v7", "serde"] }
+
+# dev-dependencies
+axum-test = "18.2"
+test-log = "0.2"

@@ -1,0 +1,57 @@
+Cargo.lock
+.cursor/
+.opencode/
+.specify/
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Rust build artifacts
+target/
+debug/
+release/
+*.rs.bk
+*.rlib
+*.prof*
+Cargo.lock
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Coverage reports
+coverage/
+lcov.info
+*.profraw
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+.fseventsd
+.Trashes
+

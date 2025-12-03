@@ -1,0 +1,60 @@
+{
+  "prices": [
+    {
+      "symbol": "BTC",
+      "price_usd": 67500.50,
+      "market_cap": 1320000000000,
+      "24h_volume": 32000000000,
+      "24h_change_pct": 2.3,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "ETH",
+      "price_usd": 3200.75,
+      "market_cap": 385000000000,
+      "24h_volume": 15000000000,
+      "24h_change_pct": 1.8,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "SOL",
+      "price_usd": 145.30,
+      "market_cap": 62000000000,
+      "24h_volume": 2500000000,
+      "24h_change_pct": 5.2,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "AVAX",
+      "price_usd": 38.50,
+      "market_cap": 14500000000,
+      "24h_volume": 480000000,
+      "24h_change_pct": -0.5,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "MATIC",
+      "price_usd": 0.85,
+      "market_cap": 8200000000,
+      "24h_volume": 320000000,
+      "24h_change_pct": 3.1,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "ADA",
+      "price_usd": 0.58,
+      "market_cap": 20400000000,
+      "24h_volume": 580000000,
+      "24h_change_pct": -1.2,
+      "last_updated": "2025-11-20T10:00:00Z"
+    },
+    {
+      "symbol": "DOT",
+      "price_usd": 7.23,
+      "market_cap": 9800000000,
+      "24h_volume": 250000000,
+      "24h_change_pct": 0.8,
+      "last_updated": "2025-11-20T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+[toolchain]
+channel = "1.91.1"
+components = [ "rustc", "cargo", "rust-src", "rust-analyzer", "rustfmt", "clippy", "rust-std" ]
+targets = [ "wasm32-wasip2" ]

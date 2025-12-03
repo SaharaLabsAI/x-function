@@ -1,0 +1,174 @@
+{
+  "ethereum": {
+    "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb": {
+      "holdings": [
+        {
+          "symbol": "ETH",
+          "contract_address": "native",
+          "balance": 18.5,
+          "price_usd": 3200.75,
+          "value_usd": 59213.88,
+          "percentage": 47.2,
+          "24h_change_pct": 1.8,
+          "cost_basis_usd": 2850.00,
+          "unrealized_pnl_usd": 6488.88,
+          "unrealized_pnl_pct": 12.3
+        },
+        {
+          "symbol": "USDC",
+          "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "balance": 28500.0,
+          "price_usd": 1.0,
+          "value_usd": 28500.0,
+          "percentage": 22.7,
+          "24h_change_pct": 0.0,
+          "cost_basis_usd": 1.0,
+          "unrealized_pnl_usd": 0.0,
+          "unrealized_pnl_pct": 0.0
+        },
+        {
+          "symbol": "LINK",
+          "contract_address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+          "balance": 850.0,
+          "price_usd": 17.5,
+          "value_usd": 14875.0,
+          "percentage": 11.9,
+          "24h_change_pct": 2.1,
+          "cost_basis_usd": 15.8,
+          "unrealized_pnl_usd": 1445.0,
+          "unrealized_pnl_pct": 10.8
+        },
+        {
+          "symbol": "UNI",
+          "contract_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+          "balance": 1200.0,
+          "price_usd": 6.45,
+          "value_usd": 7740.0,
+          "percentage": 6.2,
+          "24h_change_pct": -0.8,
+          "cost_basis_usd": 7.2,
+          "unrealized_pnl_usd": -900.0,
+          "unrealized_pnl_pct": -10.4
+        },
+        {
+          "symbol": "AAVE",
+          "contract_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "balance": 45.0,
+          "price_usd": 185.0,
+          "value_usd": 8325.0,
+          "percentage": 6.6,
+          "24h_change_pct": 3.2,
+          "cost_basis_usd": 172.0,
+          "unrealized_pnl_usd": 585.0,
+          "unrealized_pnl_pct": 7.6
+        },
+        {
+          "symbol": "MKR",
+          "contract_address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+          "balance": 2.8,
+          "price_usd": 1850.0,
+          "value_usd": 5180.0,
+          "percentage": 4.1,
+          "24h_change_pct": 1.5,
+          "cost_basis_usd": 1920.0,
+          "unrealized_pnl_usd": -196.0,
+          "unrealized_pnl_pct": -3.6
+        },
+        {
+          "symbol": "COMP",
+          "contract_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+          "balance": 28.0,
+          "price_usd": 52.0,
+          "value_usd": 1456.0,
+          "percentage": 1.2,
+          "24h_change_pct": -1.3,
+          "cost_basis_usd": 58.0,
+          "unrealized_pnl_usd": -168.0,
+          "unrealized_pnl_pct": -10.3
+        },
+        {
+          "symbol": "SNX",
+          "contract_address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+          "balance": 520.0,
+          "price_usd": 2.85,
+          "value_usd": 1482.0,
+          "percentage": 1.2,
+          "24h_change_pct": 0.5,
+          "cost_basis_usd": 3.1,
+          "unrealized_pnl_usd": -130.0,
+          "unrealized_pnl_pct": -8.1
+        }
+      ],
+      "total_value_usd": 125430.50,
+      "last_updated": "2025-11-20T10:00:00Z"
+    }
+  },
+  "solana": {
+    "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab": {
+      "holdings": [
+        {
+          "symbol": "SOL",
+          "mint_address": "native",
+          "balance": 175.0,
+          "price_usd": 145.30,
+          "value_usd": 25427.50,
+          "percentage": 55.4,
+          "24h_change_pct": 5.2,
+          "cost_basis_usd": 132.0,
+          "unrealized_pnl_usd": 2327.50,
+          "unrealized_pnl_pct": 10.1
+        },
+        {
+          "symbol": "USDT",
+          "mint_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "balance": 13200.0,
+          "price_usd": 1.0,
+          "value_usd": 13200.0,
+          "percentage": 28.8,
+          "24h_change_pct": 0.0,
+          "cost_basis_usd": 1.0,
+          "unrealized_pnl_usd": 0.0,
+          "unrealized_pnl_pct": 0.0
+        },
+        {
+          "symbol": "RAY",
+          "mint_address": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+          "balance": 1850.0,
+          "price_usd": 2.48,
+          "value_usd": 4588.0,
+          "percentage": 10.0,
+          "24h_change_pct": 3.7,
+          "cost_basis_usd": 2.15,
+          "unrealized_pnl_usd": 610.50,
+          "unrealized_pnl_pct": 15.3
+        },
+        {
+          "symbol": "ORCA",
+          "mint_address": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+          "balance": 920.0,
+          "price_usd": 1.85,
+          "value_usd": 1702.0,
+          "percentage": 3.7,
+          "24h_change_pct": 2.1,
+          "cost_basis_usd": 1.95,
+          "unrealized_pnl_usd": -92.0,
+          "unrealized_pnl_pct": -5.1
+        },
+        {
+          "symbol": "MNGO",
+          "mint_address": "MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac",
+          "balance": 12500.0,
+          "price_usd": 0.0758,
+          "value_usd": 947.50,
+          "percentage": 2.1,
+          "24h_change_pct": -2.3,
+          "cost_basis_usd": 0.085,
+          "unrealized_pnl_usd": -115.0,
+          "unrealized_pnl_pct": -10.8
+        }
+      ],
+      "total_value_usd": 45890.20,
+      "last_updated": "2025-11-20T10:00:00Z"
+    }
+  }
+}

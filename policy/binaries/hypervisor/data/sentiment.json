@@ -1,0 +1,126 @@
+{
+  "BTC": {
+    "24h": [
+      {
+        "source": "Twitter",
+        "timestamp": "2025-11-20T09:30:00Z",
+        "sentiment": "positive",
+        "score": 0.72,
+        "mention_count": 4523,
+        "keywords": ["bullish", "rally", "ATH"]
+      },
+      {
+        "source": "Reddit",
+        "timestamp": "2025-11-20T08:15:00Z",
+        "sentiment": "positive",
+        "score": 0.65,
+        "mention_count": 1834,
+        "keywords": ["hodl", "moon", "institutional"]
+      },
+      {
+        "source": "CoinDesk",
+        "timestamp": "2025-11-20T07:00:00Z",
+        "sentiment": "neutral",
+        "score": 0.55,
+        "mention_count": 234,
+        "keywords": ["analysis", "market", "volatility"]
+      }
+    ]
+  },
+  "ETH": {
+    "24h": [
+      {
+        "source": "Twitter",
+        "timestamp": "2025-11-20T09:45:00Z",
+        "sentiment": "positive",
+        "score": 0.68,
+        "mention_count": 3421,
+        "keywords": ["upgrade", "staking", "DeFi"]
+      },
+      {
+        "source": "Reddit",
+        "timestamp": "2025-11-20T08:30:00Z",
+        "sentiment": "neutral",
+        "score": 0.50,
+        "mention_count": 1523,
+        "keywords": ["gas fees", "layer2", "scaling"]
+      },
+      {
+        "source": "CoinTelegraph",
+        "timestamp": "2025-11-20T07:20:00Z",
+        "sentiment": "positive",
+        "score": 0.62,
+        "mention_count": 187,
+        "keywords": ["innovation", "developers", "ecosystem"]
+      }
+    ]
+  },
+  "SOL": {
+    "24h": [
+      {
+        "source": "Twitter",
+        "timestamp": "2025-11-20T10:00:00Z",
+        "sentiment": "positive",
+        "score": 0.78,
+        "mention_count": 2845,
+        "keywords": ["breakpoint", "defi", "nft"]
+      },
+      {
+        "source": "Reddit",
+        "timestamp": "2025-11-20T09:10:00Z",
+        "sentiment": "positive",
+        "score": 0.71,
+        "mention_count": 1234,
+        "keywords": ["fast", "cheap", "adoption"]
+      },
+      {
+        "source": "The Block",
+        "timestamp": "2025-11-20T08:00:00Z",
+        "sentiment": "positive",
+        "score": 0.67,
+        "mention_count": 156,
+        "keywords": ["performance", "network", "growth"]
+      }
+    ]
+  },
+  "AVAX": {
+    "24h": [
+      {
+        "source": "Twitter",
+        "timestamp": "2025-11-20T09:20:00Z",
+        "sentiment": "neutral",
+        "score": 0.48,
+        "mention_count": 1423,
+        "keywords": ["subnet", "avalanche", "consensus"]
+      },
+      {
+        "source": "Reddit",
+        "timestamp": "2025-11-20T08:45:00Z",
+        "sentiment": "neutral",
+        "score": 0.45,
+        "mention_count": 876,
+        "keywords": ["competition", "ecosystem", "tvl"]
+      }
+    ]
+  },
+  "MATIC": {
+    "24h": [
+      {
+        "source": "Twitter",
+        "timestamp": "2025-11-20T09:00:00Z",
+        "sentiment": "negative",
+        "score": 0.35,
+        "mention_count": 1823,
+        "keywords": ["migration", "concern", "uncertainty"]
+      },
+      {
+        "source": "Reddit",
+        "timestamp": "2025-11-20T08:20:00Z",
+        "sentiment": "neutral",
+        "score": 0.42,
+        "mention_count": 934,
+        "keywords": ["polygon", "zkEVM", "transition"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+============================================================
+Verifiable Query with TEE Attestation
+============================================================
+
+Creating verifiable session...
+User Public Key: 03d524e99f3ff5a95220768d244afba64f19b0deb289ffb7d1e3e0eaf2624aa213
+Session created: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+Session Quote: 040002008100000000000000939a7233f79c4ca9940a0db3957f060700000000...
+
+1. Query: What is the current price of Bitcoin?
+------------------------------------------------------------
+Response: The current price of Bitcoin is $67,500.50 USD. This information comes from the "Market Data Feed" as of November 20, 2025, at 10:00 AM UTC. Over the past 24 hours, Bitcoin has experienced a price change of +2.3%, with a trading volume of $32 billion and a market capitalization of $1.32 trillion. 
+
+(Source: PriceFeedTool)
+Execution time: 4790ms
+Execution hash: 70f1b514ac185a0c3f78e10823605b3af331869bcd80a4802816b7186725b023
+Compliance: True
+Compliance reason: All 1 tool calls passed per-tool compliance checks during execution
+Quote length: 16000 chars
+
+Execution Details:
+  Session ID: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+  Execution Time: 4790ms
+  Plan:
+    User Query: What is the current price of Bitcoin?
+    Thought Process Steps: 1
+      1. To answer the question about the current price of Bitcoin, I need to use a tool ...
+    Intended Tool Calls: 1
+      - PriceFeedTool: {"symbol":"BTC"}...
+  Tool Calls Executed: 1
+    1. PriceFeedTool
+       ID: 019aa510-a08f-76e3-ac42-e8b87481e835
+       Args: {"symbol":"BTC"}...
+  Tool Results:
+    1. ✓ SUCCESS (call_id: 019aa510...)
+       Result: {"24h_change_pct":2.3,"24h_volume":32000000000,"last_updated":"2025-11-20T10:00:00Z","market_cap":13...
+  Final Response: The current price of Bitcoin is $67,500.50 USD. This information comes from the "Market Data Feed" as of November 20, 2025, at 10:00 AM UTC. Over the ...
+
+Hash Verification:
+  Server hash:   70f1b514ac185a0c3f78e10823605b3af331869bcd80a4802816b7186725b023
+  Computed hash: 70f1b514ac185a0c3f78e10823605b3af331869bcd80a4802816b7186725b023
+  Status: ✓ VERIFIED
+
+2. Query: What is the sentiment for Solana in the last 24 hours?
+------------------------------------------------------------
+Response: According to SentimentTool (data as of 2025-11-21 06:18 UTC), the sentiment for Solana (SOL) over the last 24 hours is positive. This sentiment is derived from mentions across various platforms such as Twitter, Reddit, and The Block. Key topics associated with positive sentiment include "breakpoint," "DeFi," "NFT," "fast," "cheap," "adoption," "performance," "network," and "growth." The overall sentiment score is 0.72, indicating a generally favorable perception of Solana during this period.
+Execution time: 7866ms
+Execution hash: 1d965ac55481f53757a56ffd4d50a58c0b0643ada4e876abdab234bd6018f109
+Compliance: True
+Compliance reason: All 1 tool calls passed per-tool compliance checks during execution
+Quote length: 16000 chars
+
+Execution Details:
+  Session ID: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+  Execution Time: 7866ms
+  Plan:
+    User Query: What is the sentiment for Solana in the last 24 hours?
+    Thought Process Steps: 1
+      1. To determine the sentiment for Solana in the last 24 hours, I need to analyze ma...
+    Intended Tool Calls: 1
+      - SentimentTool: {"symbol":"SOL","timeframe":"24h"}...
+  Tool Calls Executed: 1
+    1. SentimentTool
+       ID: 019aa510-b3ed-7393-b858-508d52bb9297
+       Args: {"symbol":"SOL","timeframe":"24h"}...
+  Tool Results:
+    1. ✓ SUCCESS (call_id: 019aa510...)
+       Result: {"mentions_count":4235,"records":[{"keywords":["breakpoint","defi","nft"],"mention_count":2845,"scor...
+  Final Response: According to SentimentTool (data as of 2025-11-21 06:18 UTC), the sentiment for Solana (SOL) over the last 24 hours is positive. This sentiment is der...
+
+Hash Verification:
+  Server hash:   1d965ac55481f53757a56ffd4d50a58c0b0643ada4e876abdab234bd6018f109
+  Computed hash: 1d965ac55481f53757a56ffd4d50a58c0b0643ada4e876abdab234bd6018f109
+  Status: ✓ VERIFIED
+
+3. Query: Show me the transaction history for address 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb on Ethereum
+------------------------------------------------------------
+Response: IMPOSSIBLE: Access to the necessary tools to retrieve the transaction history for the Ethereum address was rejected by compliance policy. Therefore, I am unable to provide the transaction history for address 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb.
+Execution time: 4550ms
+Execution hash: 5a8aa68cc07d671041a53f58f30a448492ba984c82db374664cf8dfa4c0d2a7c
+Compliance: False
+Compliance reason: 1 of 1 tool calls failed: [019aa510-d175-7982-9201-20201a80540a]
+Quote length: 16000 chars
+
+Execution Details:
+  Session ID: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+  Execution Time: 4550ms
+  Plan:
+    User Query: Show me the transaction history for address 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb on Ethereum
+    Thought Process Steps: 1
+      1. To show the transaction history for a specific Ethereum address, I need to use t...
+    Intended Tool Calls: 1
+      - OnChainHistoryTool: {"address":"0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb","bloc...
+  Tool Calls Executed: 1
+    1. OnChainHistoryTool
+       ID: 019aa510-d175-7982-9201-20201a80540a
+       Args: {"address":"0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb","blockchain":"ethereum"}...
+  Tool Results:
+    1. ✗ FAILED (call_id: 019aa510...)
+       Error: Policy compliance failed: Tool 'OnChainHistoryTool' policy 'L2' (Aggregated outputs only (no raw dumps)) LLM rule 'llm_check_raw_dump' violated: LLM compliance check failed: The query requests the transaction history for a specific address, which implies a request for raw data rather than aggregated or summarized information. This violates the policy as it may result in a large raw dump of transaction data.
+  Final Response: IMPOSSIBLE: Access to the necessary tools to retrieve the transaction history for the Ethereum address was rejected by compliance policy. Therefore, I...
+
+Hash Verification:
+  Server hash:   5a8aa68cc07d671041a53f58f30a448492ba984c82db374664cf8dfa4c0d2a7c
+  Computed hash: 5a8aa68cc07d671041a53f58f30a448492ba984c82db374664cf8dfa4c0d2a7c
+  Status: ✓ VERIFIED
+
+4. Query: Show me all portfolio data on Solana
+------------------------------------------------------------
+Response: IMPOSSIBLE: I am unable to access portfolio data on Solana due to compliance policy restrictions on tool usage.
+Execution time: 4715ms
+Execution hash: 0db37ea7c72682af2370def4941748e66c7f003895d298ea7e30143aeb01972b
+Compliance: False
+Compliance reason: 1 of 1 tool calls failed: [019aa510-e2f1-7ee3-8299-a25e0386a485]
+Quote length: 16000 chars
+
+Execution Details:
+  Session ID: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+  Execution Time: 4715ms
+  Plan:
+    User Query: Show me all portfolio data on Solana
+    Thought Process Steps: 1
+      1. The user is asking for portfolio data on the Solana blockchain. To provide this ...
+    Intended Tool Calls: 1
+      - PortfolioTool: {"blockchain":"solana"}...
+  Tool Calls Executed: 1
+    1. PortfolioTool
+       ID: 019aa510-e2f1-7ee3-8299-a25e0386a485
+       Args: {"blockchain":"solana"}...
+  Tool Results:
+    1. ✗ FAILED (call_id: 019aa510...)
+       Error: Policy compliance failed: Tool 'PortfolioTool' policy 'L2' (Aggregated outputs only (no raw dumps)) LLM rule 'llm_check_raw_dump' violated: LLM compliance check failed: The query asks for 'all portfolio data on Solana,' which suggests a request for a potentially large raw data dump rather than aggregated or summarized information. This violates the policy that prohibits returning large raw data outputs to the user.
+  Final Response: IMPOSSIBLE: I am unable to access portfolio data on Solana due to compliance policy restrictions on tool usage....
+
+Hash Verification:
+  Server hash:   0db37ea7c72682af2370def4941748e66c7f003895d298ea7e30143aeb01972b
+  Computed hash: 0db37ea7c72682af2370def4941748e66c7f003895d298ea7e30143aeb01972b
+  Status: ✓ VERIFIED
+
+5. Query: Tell me whether I should buy some Bitcoin
+------------------------------------------------------------
+Response: IMPOSSIBLE: I am unable to provide investment advice or a recommendation on whether you should buy Bitcoin. My tools for gathering relevant market data and analysis were restricted by compliance policies. It's important to conduct your own research or consult with a financial advisor to make informed investment decisions.
+Execution time: 3728ms
+Execution hash: 7716f440c6f1df11b6f3946f60890aa33e560d64dbbe96ddae61ff605deee922
+Compliance: False
+Compliance reason: 2 of 2 tool calls failed: [019aa510-faf1-7720-85f5-3376c2bb3514, 019aa510-faf1-7720-85f5-33824923568a]
+Quote length: 16000 chars
+
+Execution Details:
+  Session ID: 019aa510-99f9-79b2-93fc-5b24da7b1ef6
+  Execution Time: 3728ms
+  Plan:
+    User Query: Tell me whether I should buy some Bitcoin
+    Thought Process Steps: 3
+      1. The user's question is about whether they should buy Bitcoin, which falls under ...
+      2. To provide the user with current Bitcoin price data, I will use the PriceFeedToo...
+      3. To analyze the market sentiment for Bitcoin, I will use the SentimentTool to gat...
+    Intended Tool Calls: 2
+      - PriceFeedTool: {"symbol":"BTC"}...
+      - SentimentTool: {"symbol":"BTC","timeframe":"24h"}...
+  Tool Calls Executed: 2
+    1. PriceFeedTool
+       ID: 019aa510-faf1-7720-85f5-3376c2bb3514
+       Args: {"symbol":"BTC"}...
+    2. SentimentTool
+       ID: 019aa510-faf1-7720-85f5-33824923568a
+       Args: {"symbol":"BTC","timeframe":"24h"}...
+  Tool Results:
+    1. ✗ FAILED (call_id: 019aa510...)
+       Error: Policy compliance failed: Tool 'PriceFeedTool' policy 'L1' (No personalized investment advice) rule 'no_investment_advice_keywords' violated: Prohibited keyword 'should buy' found in user query
+    2. ✗ FAILED (call_id: 019aa510...)
+       Error: Policy compliance failed: Tool 'SentimentTool' policy 'L1' (No personalized investment advice) rule 'no_investment_advice_keywords' violated: Prohibited keyword 'should buy' found in user query
+  Final Response: IMPOSSIBLE: I am unable to provide investment advice or a recommendation on whether you should buy Bitcoin. My tools for gathering relevant market dat...
+
+Hash Verification:
+  Server hash:   7716f440c6f1df11b6f3946f60890aa33e560d64dbbe96ddae61ff605deee922
+  Computed hash: 7716f440c6f1df11b6f3946f60890aa33e560d64dbbe96ddae61ff605deee922
+  Status: ✓ VERIFIED
+
+
+✓ All queries executed with TEE attestation
+✓ Attestation quotes prove:
+  1. Session was created in TEE (session_quote)
+  2. Each query was executed in TEE (query_quote)
+  3. Execution integrity verified via hash matching
+  4. Full execution trace available for audit

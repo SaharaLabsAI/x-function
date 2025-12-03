@@ -1,0 +1,146 @@
+{
+  "ethereum": {
+    "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb": [
+      {
+        "tx_hash": "0xa1b2c3d4e5f6...",
+        "timestamp": "2025-11-20T08:30:15Z",
+        "from": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+        "to": "0x1234567890abcdef1234567890abcdef12345678",
+        "value_eth": 0.5,
+        "value_usd": 1600.38,
+        "gas_used": 21000,
+        "type": "transfer"
+      },
+      {
+        "tx_hash": "0xb2c3d4e5f6a7...",
+        "timestamp": "2025-11-19T14:22:45Z",
+        "from": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+        "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value_eth": 0.0,
+        "token_symbol": "USDC",
+        "token_amount": 1000.0,
+        "value_usd": 1000.0,
+        "gas_used": 45000,
+        "type": "token_transfer"
+      },
+      {
+        "tx_hash": "0xc3d4e5f6a7b8...",
+        "timestamp": "2025-11-18T09:15:30Z",
+        "from": "0xabcdef1234567890abcdef1234567890abcdef12",
+        "to": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+        "value_eth": 2.3,
+        "value_usd": 7361.73,
+        "gas_used": 21000,
+        "type": "receive"
+      },
+      {
+        "tx_hash": "0xd4e5f6a7b8c9...",
+        "timestamp": "2025-11-17T16:45:10Z",
+        "from": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+        "to": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+        "value_eth": 1.0,
+        "value_usd": 3200.75,
+        "gas_used": 180000,
+        "type": "contract_interaction",
+        "contract_name": "Uniswap V2 Router"
+      },
+      {
+        "tx_hash": "0xe5f6a7b8c9d0...",
+        "timestamp": "2025-11-16T11:30:25Z",
+        "from": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+        "to": "0x514910771af9ca656af840dff83e8264ecf986ca",
+        "value_eth": 0.0,
+        "token_symbol": "LINK",
+        "token_amount": 50.0,
+        "value_usd": 875.0,
+        "gas_used": 52000,
+        "type": "token_transfer"
+      }
+    ]
+  },
+  "solana": {
+    "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab": [
+      {
+        "signature": "5Jz8K9L2M3N4P5Q6R7S8T9U0V1W2X3Y4Z5A6B7C8D9E0F1G2H3",
+        "timestamp": "2025-11-20T07:15:40Z",
+        "from": "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab",
+        "to": "9WyAcPqBsD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a",
+        "amount_sol": 10.5,
+        "value_usd": 1525.65,
+        "type": "transfer"
+      },
+      {
+        "signature": "6K0L1M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5A6B7C8D9E0F1G2H4",
+        "timestamp": "2025-11-19T13:42:18Z",
+        "from": "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab",
+        "to": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "amount_sol": 0.0,
+        "token_symbol": "USDT",
+        "token_amount": 500.0,
+        "value_usd": 500.0,
+        "type": "token_transfer"
+      },
+      {
+        "signature": "7L1M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5A6B7C8D9E0F1G2H3I5",
+        "timestamp": "2025-11-18T10:20:55Z",
+        "from": "2BvNaH8CqDeFgH5iJ6kL7mN8oP9qR0sT1uV2wX3yZ4aA5",
+        "to": "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab",
+        "amount_sol": 25.0,
+        "value_usd": 3632.50,
+        "type": "receive"
+      },
+      {
+        "signature": "8M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5A6B7C8D9E0F1G2H3I4J6",
+        "timestamp": "2025-11-17T15:05:30Z",
+        "from": "8VxQcNqXqE2z9bR3JGkJmKvHUWfFXx7yYnzw3Q9Zm5Ab",
+        "to": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+        "amount_sol": 5.0,
+        "value_usd": 726.50,
+        "type": "program_interaction",
+        "program_name": "Raydium AMM"
+      }
+    ]
+  },
+  "bitcoin": {
+    "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh": [
+      {
+        "txid": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+        "timestamp": "2025-11-19T12:30:00Z",
+        "inputs": [
+          {
+            "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+            "amount_btc": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "address": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq",
+            "amount_btc": 0.48
+          }
+        ],
+        "fee_btc": 0.00015,
+        "value_usd": 32402.40,
+        "confirmations": 6
+      },
+      {
+        "txid": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+        "timestamp": "2025-11-15T08:45:22Z",
+        "inputs": [
+          {
+            "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+            "amount_btc": 1.2
+          }
+        ],
+        "outputs": [
+          {
+            "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+            "amount_btc": 1.19
+          }
+        ],
+        "fee_btc": 0.00012,
+        "value_usd": 80325.60,
+        "confirmations": 432
+      }
+    ]
+  }
+}
