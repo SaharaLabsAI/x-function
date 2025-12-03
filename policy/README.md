@@ -16,7 +16,7 @@ Each tool provider seeks to ensure their data is used in a safe and compliant ma
 
 
 <p align="center">
-<img src="./assets/demo_use_case.png" width="700">
+<img src="./assets/demo_use_case.png" width="800">
 </p>
 
 With the x/function/customized protocol, asset owners (tool providers) can cryptographically verify:
@@ -39,7 +39,7 @@ This provides end-to-end assurance that policies are both checked before and enf
 The workflow is illustrated as follows.
 
 <p align="center">
-<img src="./assets/demo_workflow.png" width="1100">
+<img src="./assets/demo_workflow.png" width="800">
 </p>
 
 
@@ -103,7 +103,7 @@ Description: The agent may use raw tool data internally, but user-facing outputs
 
 The intent summarizer and the policy compliance checker (whose integrity is guaranteed by the TEE) collect evidence of the intent (the query, agent prompt, and thought process in this demo) and perform a compliance check against the policy specified by `OnChainHistoryTool`. 
 
-Since the policy compliance check fails, the agent cannot provide an attestation of compliance. The agent's planner determines that the query cannot be processed further without the tool output, and returns a failure message:
+As the policy compliance check fails, the agent cannot provide an attestation of compliance. The agent's planner determines that the query cannot be processed further without the tool output, and returns a failure message:
 
 ```
 Response: IMPOSSIBLE: Access to the necessary tools to retrieve the transaction history for the Ethereum address was rejected by compliance policy. Therefore, I am unable to provide the transaction history for address 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb.
