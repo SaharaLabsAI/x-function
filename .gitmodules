@@ -1,0 +1,6 @@
+[submodule "serverless/backend"]
+	path = serverless/backend
+	url = https://github.com/SaharaLabsAI/x402-function.git
+[submodule "serverless/frontend"]
+	path = serverless/frontend
+	url = https://github.com/SaharaLabsAI/x-function-demo-app.git
