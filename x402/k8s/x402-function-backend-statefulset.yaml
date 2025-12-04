@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: x402-function-backend
+  namespace: x402-function
+  labels:
+    app: x402-function-backend
+spec:
+  serviceName: x402-function-backend
+  replicas: 1
+  selector:
+    matchLabels:
+      app: x402-function-backend
+  template:
+    metadata:
+      labels:
+        app: x402-function-backend
+    spec:
+      securityContext:
+        runAsGroup: 1000
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+        - name: x402-function-backend
+          image:
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: TZ
+              value: "UTC"
+            - name: SERVER_PORT
+              value: "8080"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "staging"
+            - name: HIVE_API_BASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: x402-function-backend-secret
+                  key: HIVE_API_BASE_URL
+            - name: HIVE_API_ACCOUNT
+              valueFrom:
+                secretKeyRef:
+                  name: x402-function-backend-secret
+                  key: HIVE_API_ACCOUNT
+            - name: HIVE_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: x402-function-backend-secret
+                  key: HIVE_API_TOKEN
+            - name: HIVE_API_TOKEN_HEADER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: x402-function-backend-secret
+                  key: HIVE_API_TOKEN_HEADER_NAME
+          command:
+            - "java"
+          args:
+            - "-XX:+UseG1GC"
+            - "-XX:MaxRAMPercentage=75.0"
+            - "-XX:InitiatingHeapOccupancyPercent=45"
+            - "-XX:MaxGCPauseMillis=200"
+            - "-XX:+HeapDumpOnOutOfMemoryError"
+            - "-XX:HeapDumpPath=/app/dumps"
+            - "-Xlog:gc*:file=/app/jvm-logs/gc.log:time,uptime,level,tags:filecount=5,filesize=10M"
+            - "-jar"
+            - "/app/app.jar"
+            - "--spring.config.additional-location=file:/app/config/"
+          volumeMounts:
+            - name: config
+              mountPath: /app/config/
+              readOnly: true
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 5
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+      volumes:
+        - name: config
+          configMap:
+            name: x402-function-backend-config
+---

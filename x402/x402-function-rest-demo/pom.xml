@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>x402-function-rest-demo</artifactId>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.10.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <configuration>
+            <excludes>
+              <exclude>
+                <artifactId>lombok</artifactId>
+                <groupId>org.projectlombok</groupId>
+              </exclude>
+            </excludes>
+          </configuration>
+          <groupId>org.springframework.boot</groupId>
+          <version>${spring-boot.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-archetype-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.2.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>ai.saharalabs.x402.function.demo.Application</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+            <id>repackage</id>
+          </execution>
+        </executions>
+        <groupId>org.springframework.boot</groupId>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <optional>true</optional>
+      <scope>provided</scope>
+      <version>${lombok.version}</version>
+    </dependency>
+
+    <!-- Spring Boot Dependencies -->
+    <dependency>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <optional>true</optional>
+    </dependency>
+    <!-- Spring Boot Dependencies End -->
+
+    <!--Knife4j-->
+    <dependency>
+      <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+      <groupId>com.github.xiaoymin</groupId>
+    </dependency>
+    <!--Knife4j end-->
+
+    <!-- Actuator -->
+    <dependency>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <!-- Actuator end -->
+
+    <!-- X402 Function Spring Boot Starter -->
+    <dependency>
+      <artifactId>x402-function-spring-boot-starter</artifactId>
+      <groupId>ai.saharalabs.x402-function</groupId>
+    </dependency>
+    <!-- X402 Function Spring Boot Starter end -->
+
+    <!-- Hive Vendor Spring Boot Starter -->
+    <dependency>
+      <artifactId>hive-vendor-spring-boot-starter</artifactId>
+      <groupId>ai.saharalabs.x402-function</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- Hive Vendor Spring Boot Starter end -->
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Spring Framework dependencies -->
+      <dependency>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${spring-boot.version}</version>
+      </dependency>
+      <!-- Spring Framework dependencies end -->
+
+      <!--Knife4j-->
+      <dependency>
+        <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+        <groupId>com.github.xiaoymin</groupId>
+        <version>${knife4j.version}</version>
+      </dependency>
+      <!--Knife4j end-->
+
+      <!-- x402 function BOM -->
+      <dependency>
+        <artifactId>x402-function-bom</artifactId>
+        <groupId>ai.saharalabs.x402-function</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <!-- x402 function BOM end -->
+    </dependencies>
+  </dependencyManagement>
+
+  <groupId>ai.saharalabs.x402-function</groupId>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <properties>
+    <knife4j.version>4.4.0</knife4j.version>
+    <lombok.version>1.18.30</lombok.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring-boot.version>3.2.4</spring-boot.version>
+  </properties>
+
+  <version>1.0-SNAPSHOT</version>
+
+</project>
