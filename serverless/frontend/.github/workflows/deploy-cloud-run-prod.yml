@@ -1,0 +1,14 @@
+name: Deploy to CLOUD RUN PROD
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-prod:
+    permissions:
+      id-token: write
+      contents: read
+    uses: SaharaaQuestLab/ci-cd/.github/workflows/cloud-run-deploy.yml@main
+    with:
+      environment: prod
+      deployment_name: git-repo-deploy-portal
+      image: git-repo-deploy-portal

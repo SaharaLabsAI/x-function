@@ -1,0 +1,10 @@
+/node_modules
+
+# next.js
+/.next/
+/out/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
