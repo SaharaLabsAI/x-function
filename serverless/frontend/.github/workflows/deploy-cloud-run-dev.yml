@@ -1,0 +1,17 @@
+name: Deploy to CLOUD RUN DEV
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-dev:
+    permissions:
+      id-token: write
+      contents: read
+    uses: SaharaaQuestLab/ci-cd/.github/workflows/cloud-run-deploy.yml@main
+    with:
+      environment: dev
+      deployment_name: git-repo-deploy-portal
+      image: git-repo-deploy-portal

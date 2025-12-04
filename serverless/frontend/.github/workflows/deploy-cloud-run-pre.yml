@@ -1,0 +1,14 @@
+name: Deploy to CLOUD RUN PRE
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-pre:
+    permissions:
+      id-token: write
+      contents: read
+    uses: SaharaaQuestLab/ci-cd/.github/workflows/cloud-run-deploy.yml@main
+    with:
+      environment: preprod
+      deployment_name: git-repo-deploy-portal-pre
+      image: git-repo-deploy-portal
